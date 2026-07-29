@@ -1,0 +1,75 @@
+baseURL = "https://manuelcencerrado.com/"
+languageCode = "es-es"
+title = "pcapcafe"
+theme = "PaperMod"
+paginate = 8
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+
+[params]
+  env = "production"
+  description = "pcapcafe — Notas y capturas de un estudiante de ciberseguridad sobre hackeos, cloud y actualidad tech."
+  author = "Manuel Cencerrado"
+  defaultTheme = "dark"        # arranca en modo oscuro por defecto
+  disableThemeToggle = false   # pero dejas que el usuario cambie a claro si quiere
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  comments = false
+  favicon = "/favicon.ico"
+  images = ["/images/portada-default.png"]
+
+  [params.homeInfoParams]
+    Title = "pcapcafe$ whoami"
+    Content = "Notas y capturas de un estudiante de Ingeniería Informática (UFV) especializándose en **ciberseguridad y cloud**. Un café, un pcap, y lo que voy aprendiendo por el camino."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/manuelcpedrero"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/manuelcencerrado"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "cloud"
+    name = "Cloud"
+    url = "/cloud/"
+    weight = 20
+  [[menu.main]]
+    identifier = "noticias"
+    name = "Noticias"
+    url = "/noticias/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Buscar"
+    url = "/search/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    codeFences = true
+    guessSyntax = true
+    noClasses = false

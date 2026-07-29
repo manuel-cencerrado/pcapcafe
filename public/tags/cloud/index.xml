@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloud on pcapcafe</title>
+    <link>http://localhost:1313/tags/cloud/</link>
+    <description>Recent content in Cloud on pcapcafe</description>
+    <image>
+      <title>pcapcafe</title>
+      <url>http://localhost:1313/images/portada-default.png</url>
+      <link>http://localhost:1313/images/portada-default.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>es-es</language>
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bienvenido a pcapcafe: ciberseguridad, cloud y el camino de un estudiante</title>
+      <link>http://localhost:1313/posts/01-presentacion/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/01-presentacion/</guid>
+      <description>&lt;h2 id=&#34;quién-soy&#34;&gt;Quién soy&lt;/h2&gt;
+&lt;p&gt;Me llamo Manuel Cencerrado, estudio Ingeniería Informática en la Universidad Francisco de Vitoria y este curso empiezo 3º, especializándome en &lt;strong&gt;ciberseguridad&lt;/strong&gt;. Actualmente estoy haciendo prácticas en Cojali S.L., donde participo en auditorías de seguridad web, lo que me está dando una perspectiva muy práctica de algo que hasta hace poco solo veía en la teoría de clase.&lt;/p&gt;
+&lt;p&gt;Este blog nace de una necesidad muy simple: &lt;strong&gt;quiero entender mejor lo que estudio, y explicarlo es la mejor forma de aprenderlo de verdad&lt;/strong&gt;. Si de paso a alguien más le sirve, mejor todavía.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
