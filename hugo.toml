@@ -2,7 +2,8 @@ baseURL = "https://manuelcencerrado.com/"
 languageCode = "es-es"
 title = "pcapcafe"
 theme = "PaperMod"
-paginate = 8
+[pagination]
+  pagerSize = 8
 
 enableRobotsTXT = true
 buildDrafts = false
