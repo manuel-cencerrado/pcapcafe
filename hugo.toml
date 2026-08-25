@@ -10,6 +10,9 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # el JSON alimenta el buscador (/search/)
+
 [minify]
   disableXML = true
 
@@ -57,9 +60,9 @@ buildExpired = false
     url = "/cloud/"
     weight = 20
   [[menu.main]]
-    identifier = "noticias"
-    name = "Noticias"
-    url = "/noticias/"
+    identifier = "ciberseguridad"
+    name = "Ciberseguridad"
+    url = "/ciberseguridad/"
     weight = 30
   [[menu.main]]
     identifier = "search"
