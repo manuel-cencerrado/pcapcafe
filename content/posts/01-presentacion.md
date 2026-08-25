@@ -9,6 +9,8 @@ tags: ["presentación", "ciberseguridad", "cloud"]
 
 Me llamo Manuel Cencerrado, estudio Ingeniería Informática en la Universidad Francisco de Vitoria y este curso empiezo 3º, especializándome en **ciberseguridad**. Actualmente estoy haciendo prácticas en Cojali S.L., donde participo en auditorías de seguridad web, lo que me está dando una perspectiva muy práctica de algo que hasta hace poco solo veía en la teoría de clase.
 
+Soy una persona curiosa por naturaleza, y esa curiosidad es la que me metió de lleno en el mundo de la ciberseguridad y el cloud: cuanto más aprendo, más ganas tengo de seguir tirando del hilo. Este blog es, en el fondo, una forma de canalizar esa curiosidad y dejar constancia de lo que voy descubriendo por el camino.
+
 Este blog nace de una necesidad muy simple: **quiero entender mejor lo que estudio, y explicarlo es la mejor forma de aprenderlo de verdad**. Si de paso a alguien más le sirve, mejor todavía.
 
 ¿Por qué **pcapcafe**? Porque un `.pcap` es el formato en el que se guardan las capturas de tráfico de red (algo con lo que trabajarás muy a menudo en ciberseguridad), y porque este blog nace un poco como esas charlas de café: informales, curiosas, sin pretensión de ser la fuente definitiva de nada, solo de compartir lo que voy aprendiendo.
@@ -31,7 +33,7 @@ Si eres estudiante de informática, si te interesa la ciberseguridad o el cloud,
 
 ## Qué puedes esperar
 
-Publicaré con una frecuencia aproximada de 1-2 veces por semana. Iré compartiendo también los proyectos personales que vaya montando (laboratorios, despliegues en cloud, herramientas) a medida que los vaya teniendo listos.
+Voy a publicar un artículo nuevo cada **lunes**. Prefiero un ritmo constante y sostenible antes que prometer varias entradas por semana y no cumplirlo. Iré compartiendo también los proyectos personales que vaya montando (laboratorios, despliegues en cloud, herramientas) a medida que los vaya teniendo listos.
 
 Si quieres comentar algo, corregirme, o simplemente charlar sobre algún tema, puedes escribirme al LinkedIn: @manuelcencerrado.
 

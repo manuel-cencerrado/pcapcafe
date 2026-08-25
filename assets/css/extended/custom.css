@@ -1,0 +1,129 @@
+/* ==========================================================================
+   pcapcafe — tema personalizado (claro/oscuro)
+   Este archivo se añade automáticamente al bundle de PaperMod, sin tocar
+   el tema. Define un acento "terminal" propio y lo adapta a ambos modos
+   para que el toggle claro/oscuro se pueda dejar activo sin perder la
+   identidad visual del blog.
+   ========================================================================== */
+
+:root {
+    /* Acento en modo claro: verde terminal oscurecido, con contraste
+       suficiente (~4.6:1) sobre fondo blanco */
+    --accent: rgb(9, 128, 94);
+    --accent-soft: rgba(9, 128, 94, 0.1);
+    --accent-contrast: rgb(255, 255, 255);
+}
+
+:root[data-theme="dark"] {
+    /* Acento en modo oscuro: verde terminal más vivo, como un prompt de shell */
+    --accent: rgb(70, 226, 165);
+    --accent-soft: rgba(70, 226, 165, 0.12);
+    --accent-contrast: rgb(15, 17, 18);
+}
+
+/* Selección de texto */
+::selection {
+    background: var(--accent-soft);
+    color: var(--content);
+}
+
+/* Barra de scroll (WebKit) en modo oscuro, para que no desentone con el
+   resto de la interfaz */
+:root[data-theme="dark"] ::-webkit-scrollbar {
+    width: 10px;
+}
+
+:root[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+:root[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 10px;
+}
+
+/* Logo / título del blog ("pcapcafe$ whoami") */
+.logo a {
+    color: var(--primary);
+}
+
+.logo a:hover {
+    color: var(--accent);
+}
+
+/* Menú de navegación: subrayado de acento en el ítem activo/hover */
+.menu a {
+    transition: color 0.15s ease;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* Enlaces dentro del contenido de los artículos */
+.post-content a,
+.md-content a:not(.anchor) {
+    color: var(--accent);
+    text-decoration-color: var(--accent-soft);
+}
+
+.post-content a:hover,
+.md-content a:not(.anchor):hover {
+    text-decoration-color: var(--accent);
+}
+
+/* Título del artículo al pasar el cursor en los listados */
+.post-entry .entry-header h2:hover,
+.post-title:hover {
+    color: var(--accent);
+}
+
+/* Citas: barra lateral con el acento en vez del gris genérico */
+.md-content blockquote {
+    border-inline-start-color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Código en línea: un toque de acento en el borde */
+.post-content code {
+    border: 1px solid var(--border);
+}
+
+/* Etiquetas (tags) de los posts */
+.post-tags a {
+    border: 1px solid var(--border);
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.post-tags a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* Botón de cambio de tema: resalta un poco al pasar el ratón */
+.theme-toggle {
+    transition: transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+}
+
+/* Botón "volver arriba" */
+#top-link {
+    background: var(--accent) !important;
+    color: var(--accent-contrast) !important;
+}
+
+/* Iconos sociales del footer */
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+}
+
+/* Prompt del "whoami" en la home: refuerza el aire de terminal */
+.home-info .entry-header h1 {
+    color: var(--accent);
+}
