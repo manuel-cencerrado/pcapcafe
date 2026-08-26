@@ -1,14 +1,18 @@
 baseURL = "https://manuelcencerrado.com/"
-languageCode = "es-es"
 title = "pcapcafe"
 theme = "PaperMod"
-[pagination]
-  pagerSize = 8
+
+# --- Multilenguaje ---
+defaultContentLanguage = "es"          # el español es el idioma "canónico": vive en la raíz (/)
+defaultContentLanguageInSubdir = false # el inglés se sirve bajo /en/
 
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+[pagination]
+  pagerSize = 8
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]  # el JSON alimenta el buscador (/search/)
@@ -16,12 +20,14 @@ buildExpired = false
 [minify]
   disableXML = true
 
+# Parámetros comunes a los dos idiomas (cada idioma puede sobreescribir
+# cualquiera de estos en su propio bloque [languages.xx.params])
 [params]
   env = "production"
-  description = "pcapcafe — Notas y capturas de un estudiante de ciberseguridad sobre hackeos, cloud y actualidad tech."
   author = "Manuel Cencerrado"
   defaultTheme = "dark"        # arranca en modo oscuro por defecto
-  disableThemeToggle = false  # modo claro terminado: el usuario puede cambiar de tema
+  disableThemeToggle = false   # modo claro terminado: el usuario puede cambiar de tema
+  displayFullLangName = true   # muestra "Español" / "English" en el selector, no "ES"/"EN"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -36,10 +42,6 @@ buildExpired = false
   favicon = "/favicon.ico"
   images = ["/images/portada-default.png"]
 
-  [params.homeInfoParams]
-    Title = "pcapcafe$ whoami"
-    Content = "Notas y capturas de un estudiante de Ingeniería Informática (UFV) especializándose en **ciberseguridad y cloud**. Un café, un pcap, y lo que voy aprendiendo por el camino."
-
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/manuelcpedrero"
@@ -48,28 +50,6 @@ buildExpired = false
     name = "linkedin"
     url = "https://linkedin.com/in/manuelcencerrado"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "cloud"
-    name = "Cloud"
-    url = "/cloud/"
-    weight = 20
-  [[menu.main]]
-    identifier = "ciberseguridad"
-    name = "Ciberseguridad"
-    url = "/ciberseguridad/"
-    weight = 30
-  [[menu.main]]
-    identifier = "search"
-    name = "Buscar"
-    url = "/search/"
-    weight = 40
-
 [markup]
   [markup.highlight]
     style = "monokai"
@@ -77,3 +57,76 @@ buildExpired = false
     codeFences = true
     guessSyntax = true
     noClasses = false
+
+# --- Definición de idiomas ---
+[languages]
+
+  [languages.es]
+    label = "Español"
+    locale = "es-ES"
+    weight = 1
+    title = "pcapcafe"
+
+    [languages.es.params]
+      description = "pcapcafe — Notas y capturas de un estudiante de ciberseguridad sobre hackeos, cloud y actualidad tech."
+
+      [languages.es.params.homeInfoParams]
+        Title = "pcapcafe$ whoami"
+        Content = "Notas y capturas de un estudiante de Ingeniería Informática (UFV) especializándose en **ciberseguridad y cloud**. Un café, un pcap, y lo que voy aprendiendo por el camino."
+
+    [languages.es.menu]
+      [[languages.es.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+      [[languages.es.menu.main]]
+        identifier = "cloud"
+        name = "Cloud"
+        url = "/cloud/"
+        weight = 20
+      [[languages.es.menu.main]]
+        identifier = "ciberseguridad"
+        name = "Ciberseguridad"
+        url = "/ciberseguridad/"
+        weight = 30
+      [[languages.es.menu.main]]
+        identifier = "search"
+        name = "Buscar"
+        url = "/search/"
+        weight = 40
+
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+    title = "pcapcafe"
+
+    [languages.en.params]
+      description = "pcapcafe — Notes and packet captures from a cybersecurity student on hacks, cloud, and tech news."
+
+      [languages.en.params.homeInfoParams]
+        Title = "pcapcafe$ whoami"
+        Content = "Notes from a Computer Engineering student (UFV) specializing in **cybersecurity and cloud**. A coffee, a pcap, and whatever I'm learning along the way."
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+      [[languages.en.menu.main]]
+        identifier = "cloud"
+        name = "Cloud"
+        url = "/cloud/"
+        weight = 20
+      [[languages.en.menu.main]]
+        identifier = "ciberseguridad"
+        name = "Cybersecurity"
+        url = "/ciberseguridad/"
+        weight = 30
+      [[languages.en.menu.main]]
+        identifier = "search"
+        name = "Search"
+        url = "/search/"
+        weight = 40

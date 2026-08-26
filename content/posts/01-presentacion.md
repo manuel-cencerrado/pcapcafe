@@ -7,7 +7,7 @@ tags: ["presentación", "ciberseguridad", "cloud"]
 
 ## Quién soy
 
-Me llamo Manuel Cencerrado, estudio Ingeniería Informática en la Universidad Francisco de Vitoria y este curso empiezo 3º, especializándome en **ciberseguridad**. Actualmente estoy haciendo prácticas en Cojali S.L., donde participo en auditorías de seguridad web, lo que me está dando una perspectiva muy práctica de algo que hasta hace poco solo veía en la teoría de clase.
+Me llamo Manuel Cencerrado, estudio Ingeniería Informática en la Universidad Francisco de Vitoria y este curso empiezo 3º, especializándome en **ciberseguridad**.
 
 Soy una persona curiosa por naturaleza, y esa curiosidad es la que me metió de lleno en el mundo de la ciberseguridad y el cloud: cuanto más aprendo, más ganas tengo de seguir tirando del hilo. Este blog es, en el fondo, una forma de canalizar esa curiosidad y dejar constancia de lo que voy descubriendo por el camino.
 
@@ -19,13 +19,13 @@ Este blog nace de una necesidad muy simple: **quiero entender mejor lo que estud
 
 No quiero que esto sea un blog más de "10 trucos de ciberseguridad" genéricos. Mi idea es comentar la **actualidad**: hackeos, filtraciones, vulnerabilidades (CVEs) y novedades en el mundo cloud (AWS, Azure, GCP), explicando qué ha pasado, por qué ha pasado y qué se puede aprender de ello.
 
-Siempre que pueda, intentaré conectar esas noticias con lo que veo en la universidad o en mis prácticas —sin entrar nunca en detalles concretos de clientes o información confidencial, claro—, porque creo que ese cruce entre teoría, actualidad y práctica real es donde más se aprende.
+Siempre que pueda, intentaré conectar esas noticias con lo que veo en la universidad, porque creo que ese cruce entre teoría y actualidad es donde más se aprende.
 
 En resumen, aquí encontrarás:
 
 - **Análisis de noticias de seguridad y cloud**, explicadas de forma clara y sin tecnicismos innecesarios.
 - **Conceptos técnicos** (tipos de vulnerabilidades, herramientas, buenas prácticas) explicados a partir de casos reales de actualidad.
-- **Reflexiones sobre mi propio camino**: qué estoy estudiando, qué certificaciones preparo, qué aprendo en mis prácticas, y qué le diría a alguien que empieza ahora en esto.
+- **Reflexiones sobre mi propio camino**: qué estoy estudiando, qué certificaciones preparo, y qué le diría a alguien que empieza ahora en esto.
 
 ## Por qué te puede interesar
 
