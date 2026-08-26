@@ -78,22 +78,22 @@ buildExpired = false
       [[languages.es.menu.main]]
         identifier = "posts"
         name = "Posts"
-        url = "/posts/"
+        url = "posts/"
         weight = 10
       [[languages.es.menu.main]]
         identifier = "cloud"
         name = "Cloud"
-        url = "/cloud/"
+        url = "cloud/"
         weight = 20
       [[languages.es.menu.main]]
         identifier = "ciberseguridad"
         name = "Ciberseguridad"
-        url = "/ciberseguridad/"
+        url = "ciberseguridad/"
         weight = 30
       [[languages.es.menu.main]]
         identifier = "search"
         name = "Buscar"
-        url = "/search/"
+        url = "search/"
         weight = 40
 
   [languages.en]
@@ -113,20 +113,20 @@ buildExpired = false
       [[languages.en.menu.main]]
         identifier = "posts"
         name = "Posts"
-        url = "/posts/"
+        url = "posts/"
         weight = 10
       [[languages.en.menu.main]]
         identifier = "cloud"
         name = "Cloud"
-        url = "/cloud/"
+        url = "cloud/"
         weight = 20
       [[languages.en.menu.main]]
         identifier = "ciberseguridad"
         name = "Cybersecurity"
-        url = "/ciberseguridad/"
+        url = "ciberseguridad/"
         weight = 30
       [[languages.en.menu.main]]
         identifier = "search"
         name = "Search"
-        url = "/search/"
+        url = "search/"
         weight = 40
