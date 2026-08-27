@@ -1,0 +1,55 @@
+{{- /*
+  Posts relacionados por tags compartidos.
+  Se apoya en el hook oficial de PaperMod (se llama automáticamente al
+  final del contenido de cada post, ver layouts/single.html del tema).
+  No usa .Related de Hugo: cuenta a mano cuántos tags tiene en común cada
+  candidato con el post actual, para que el resultado sea 100% predecible.
+*/ -}}
+{{- $current := . }}
+{{- if and (eq .Kind "page") (in site.Params.mainSections .Type) }}
+{{- $myTags := $current.GetTerms "tags" }}
+{{- if gt (len $myTags) 0 }}
+
+  {{- $myTagURLs := slice }}
+  {{- range $myTags }}{{ $myTagURLs = $myTagURLs | append .RelPermalink }}{{ end }}
+
+  {{- $candidates := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{- $candidates = where $candidates "Lang" "==" $current.Lang }}
+  {{- $candidates = where $candidates "RelPermalink" "!=" $current.RelPermalink }}
+
+  {{- $scored := slice }}
+  {{- range $candidates }}
+    {{- $other := . }}
+    {{- $score := 0 }}
+    {{- range $other.GetTerms "tags" }}
+      {{- if in $myTagURLs .RelPermalink }}
+        {{- $score = add $score 1 }}
+      {{- end }}
+    {{- end }}
+    {{- if gt $score 0 }}
+      {{- $scored = $scored | append (dict "Page" $other "Score" $score) }}
+    {{- end }}
+  {{- end }}
+
+  {{- if gt (len $scored) 0 }}
+    {{- $scored = sort $scored "Score" "desc" }}
+    {{- $related := first 3 $scored }}
+<aside class="related-posts">
+  <h2 class="related-posts-title">
+    {{- if eq $current.Language.Lang "es" }}También te puede interesar{{ else }}You might also like{{ end -}}
+  </h2>
+  <div class="related-posts-list">
+    {{- range $related }}
+    {{- $p := .Page }}
+    <a class="related-post-card" href="{{ $p.Permalink }}">
+      <span class="related-post-title">{{ $p.Title }}</span>
+      <span class="related-post-meta">{{ $p.Date.Format "2 Jan 2006" }} · {{ $p.ReadingTime }} min</span>
+    </a>
+    {{- end }}
+  </div>
+</aside>
+  {{- end }}
+
+{{- end }}
+
+{{- end }}

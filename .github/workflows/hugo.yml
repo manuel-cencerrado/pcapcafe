@@ -40,6 +40,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generar portadas automáticas por post
+        run: |
+          pip install --quiet pillow
+          python3 scripts/generate_covers.py
+
       - name: Compilar el sitio con Hugo
         run: |
           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"

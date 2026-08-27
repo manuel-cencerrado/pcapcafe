@@ -1,0 +1,7 @@
+DejaVu Sans Mono (Regular y Bold)
+Fuentes del proyecto DejaVu Fonts (https://dejavu-fonts.github.io/),
+distribuidas bajo una licencia libre derivada de la Bitstream Vera License.
+Empaquetadas aquí para que scripts/generate_covers.py no dependa de qué
+fuentes tenga instaladas el runner de GitHub Actions o tu máquina local.
+
+Licencia completa: https://dejavu-fonts.github.io/License.html

@@ -1,3 +1,8 @@
 ﻿public/
 resources/
 .hugo_build.lock
+
+# Portadas autogeneradas por scripts/generate_covers.py: se generan solas
+# en cada build (ver .github/workflows/hugo.yml), no hace falta versionarlas.
+# Para verlas en local con `hugo server`, ejecuta el script tú mismo antes.
+assets/images/covers/

@@ -150,3 +150,142 @@
 .home-info .entry-header h1 {
     color: var(--accent);
 }
+
+/* Posts relacionados (final de cada artículo) */
+.related-posts {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+}
+
+.related-posts-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.related-posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.9rem;
+}
+
+.related-post-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.related-post-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.related-post-title {
+    color: var(--primary);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.related-post-card:hover .related-post-title {
+    color: var(--accent);
+}
+
+.related-post-meta {
+    color: var(--secondary);
+    font-size: 0.85rem;
+}
+
+/* Portadas autogeneradas por post (ver scripts/generate_covers.py):
+   ligero halo de acento para diferenciarlas visualmente de una portada
+   subida a mano, sin ser intrusivo */
+.entry-cover-auto img {
+    border: 1px solid var(--border);
+}
+
+/* Newsletter (Buttondown), al final de cada post */
+.newsletter-box {
+    margin-top: 2rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+}
+
+.newsletter-title {
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 0.3rem 0;
+}
+
+.newsletter-copy {
+    color: var(--secondary);
+    margin: 0 0 0.9rem 0;
+    font-size: 0.95rem;
+}
+
+.newsletter-label {
+    display: none; /* accesible para lectores de pantalla, oculto visualmente: el placeholder ya explica el campo */
+}
+
+.newsletter-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.newsletter-form-row input[type="email"] {
+    flex: 1 1 220px;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--theme);
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.newsletter-form-row input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.newsletter-form-row input[type="submit"] {
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--accent);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.newsletter-form-row input[type="submit"]:hover {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.newsletter-fineprint {
+    margin: 0.75rem 0 0 0;
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+.newsletter-fineprint a {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.newsletter-fineprint a:hover {
+    color: var(--accent);
+}

@@ -20,6 +20,19 @@ buildExpired = false
 [minify]
   disableXML = true
 
+# /llms.txt: índice del sitio en markdown para agentes/IA (llmstxt.org).
+# La plantilla ya viene incluida en PaperMod (layouts/llms.txt), solo hacía
+# falta declarar el formato. OJO: se activa solo para español más abajo
+# (dentro de [languages.es.outputs]) y NO aquí en global, porque si se activa
+# para los dos idiomas, el build de inglés sobrescribe el archivo de español
+# al ser un output "root" (comprobado compilando el sitio en local).
+[outputFormats.llms]
+  baseName = "llms"
+  isPlainText = true
+  mediaType = "text/plain"
+  rel = "alternate"
+  root = true
+
 # Parámetros comunes a los dos idiomas (cada idioma puede sobreescribir
 # cualquiera de estos en su propio bloque [languages.xx.params])
 [params]
@@ -41,6 +54,19 @@ buildExpired = false
   comments = false
   favicon = "/favicon.ico"
   images = ["/images/portada-default.png"]
+
+  # Secciones que cuentan como "artículos del blog" a efectos de:
+  # - el listado de la home
+  # - el listado agregado de /posts/ (ver layouts/posts/list.html)
+  # Sin esto, Hugo elige automáticamente UNA sola sección como "principal"
+  # y las demás no aparecerían ni en la home ni en /posts/.
+  mainSections = ["posts", "ciberseguridad", "cloud"]
+
+  [params.schema]
+    # Blog personal de una persona, no de una organización/empresa:
+    # así el JSON-LD (datos estructurados para Google) usa @type "Person"
+    # en vez de "Organization" en publisher/autor.
+    publisherType = "Person"
 
   [[params.socialIcons]]
     name = "github"
@@ -74,6 +100,9 @@ buildExpired = false
         Title = "pcapcafe$ whoami"
         Content = "Notas y capturas de un estudiante de Ingeniería Informática (UFV) especializándose en **ciberseguridad y cloud**. Un café, un pcap, y lo que voy aprendiendo por el camino."
 
+    [languages.es.outputs]
+      home = ["HTML", "RSS", "JSON", "llms"]
+
     [languages.es.menu]
       [[languages.es.menu.main]]
         identifier = "posts"
@@ -90,6 +119,11 @@ buildExpired = false
         name = "Ciberseguridad"
         url = "ciberseguridad/"
         weight = 30
+      [[languages.es.menu.main]]
+        identifier = "archive"
+        name = "Archivo"
+        url = "archive/"
+        weight = 35
       [[languages.es.menu.main]]
         identifier = "search"
         name = "Buscar"
@@ -125,6 +159,11 @@ buildExpired = false
         name = "Cybersecurity"
         url = "ciberseguridad/"
         weight = 30
+      [[languages.en.menu.main]]
+        identifier = "archive"
+        name = "Archive"
+        url = "archive/"
+        weight = 35
       [[languages.en.menu.main]]
         identifier = "search"
         name = "Search"
