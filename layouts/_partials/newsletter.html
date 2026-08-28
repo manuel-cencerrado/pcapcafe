@@ -1,0 +1,56 @@
+{{- /*
+  Formulario de newsletter (Buttondown). Recibe la página actual como
+  contexto (se llama con `partial "newsletter.html" $current` desde
+  extend_post_content.html).
+
+  El action/refer de abajo son el código EXACTO que da el panel de
+  Buttondown (Settings → Embedding & Sharing → "As a Form") para la cuenta
+  manuelc. Si algún día cambias de cuenta o de plan, vuelve a copiar el
+  código de ahí y sustituye solo esas dos URLs.
+
+  Añadido sobre el código original de Buttondown: el atributo
+  target="popupwindow" + el onsubmit que abre una ventana emergente ya
+  dimensionada, para que confirmar la suscripción no saque al lector fuera
+  de pcapcafe (patrón estándar en este tipo de formularios embebidos).
+*/ -}}
+{{- $es := eq .Language.Lang "es" }}
+<div class="newsletter-box">
+  <p class="newsletter-title">
+    {{- if $es }}¿Te ha gustado esto?{{ else }}Enjoyed this?{{ end -}}
+  </p>
+  <p class="newsletter-copy">
+    {{- if $es }}
+      Recibe los nuevos posts de pcapcafe en tu correo, sin spam.
+    {{- else }}
+      Get new pcapcafe posts in your inbox. No spam.
+    {{- end }}
+  </p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/manuelc"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/api/emails/embed-subscribe/manuelc', 'popupwindow', 'scrollbars=yes,width=800,height=600'); return true;"
+    class="embeddable-buttondown-form newsletter-form"
+  >
+    <label for="bd-email" class="newsletter-label">
+      {{- if $es }}Tu email{{ else }}Your email{{ end -}}
+    </label>
+    <div class="newsletter-form-row">
+      <input
+        type="email"
+        name="email"
+        id="bd-email"
+        placeholder="{{ if $es }}tu@email.com{{ else }}you@email.com{{ end }}"
+        required
+      />
+      <input type="submit" value="{{ if $es }}Suscribirme{{ else }}Subscribe{{ end }}" />
+    </div>
+  </form>
+  <p class="newsletter-fineprint">
+    {{- if $es }}Puedes darte de baja cuando quieras.{{ else }}Unsubscribe anytime.{{ end }}
+    ·
+    <a href="https://buttondown.com/refer/manuelc" target="_blank" rel="noopener noreferrer">
+      {{- if $es }}Con tecnología de Buttondown{{ else }}Powered by Buttondown{{ end -}}
+    </a>
+  </p>
+</div>
