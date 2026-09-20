@@ -70,7 +70,7 @@ buildExpired = false
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/manuelcpedrero"
+    url = "https://github.com/manuel-cencerrado"
 
   [[params.socialIcons]]
     name = "linkedin"
