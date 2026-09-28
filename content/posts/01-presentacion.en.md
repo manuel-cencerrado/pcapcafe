@@ -33,7 +33,7 @@ If you're a computer science student, if you're interested in cybersecurity or c
 
 ## What to expect
 
-I'll publish a new article every **Monday**. I'd rather keep a steady, sustainable pace than promise several posts a week and fail to deliver. I'll also share the personal projects I put together along the way (labs, cloud deployments, tools) as I get them ready.
+I'll publish a new article every **Tuesday**. I'd rather keep a steady, sustainable pace than promise several posts a week and fail to deliver. I'll also share the personal projects I put together along the way (labs, cloud deployments, tools) as I get them ready.
 
 If you want to comment on something, correct me, or just chat about a topic, you can reach me on LinkedIn: @manuelcencerrado.
 

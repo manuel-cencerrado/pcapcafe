@@ -33,7 +33,7 @@ Si eres estudiante de informática, si te interesa la ciberseguridad o el cloud,
 
 ## Qué puedes esperar
 
-Voy a publicar un artículo nuevo cada **lunes**. Prefiero un ritmo constante y sostenible antes que prometer varias entradas por semana y no cumplirlo. Iré compartiendo también los proyectos personales que vaya montando (laboratorios, despliegues en cloud, herramientas) a medida que los vaya teniendo listos.
+Voy a publicar un artículo nuevo cada **martes**. Prefiero un ritmo constante y sostenible antes que prometer varias entradas por semana y no cumplirlo. Iré compartiendo también los proyectos personales que vaya montando (laboratorios, despliegues en cloud, herramientas) a medida que los vaya teniendo listos.
 
 Si quieres comentar algo, corregirme, o simplemente charlar sobre algún tema, puedes escribirme al LinkedIn: @manuelcencerrado.
 
